@@ -1,0 +1,34 @@
+# Dependencias
+node_modules/
+.pnpm-store/
+
+# Archivos de entorno y credenciales (¡Seguridad!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# Compilación y builds
+dist/
+build/
+.next/
+out/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Docker y archivos temporales
+*.tmp
