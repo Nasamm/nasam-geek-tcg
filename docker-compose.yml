@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # API Gateway / Reverse Proxy
+  traefik:
+    image: traefik:v2.10
+    container_name: nasam_traefik
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080" # Dashboard de Traefik
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - tcg_network
+
+networks:
+  tcg_network:
+    driver: bridge
