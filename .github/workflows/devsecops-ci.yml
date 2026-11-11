@@ -34,7 +34,7 @@ jobs:
       - name: Validar Sintaxis (Simulación)
         run: echo "Verificación de linteo estricto configurada exitosamente."
 
-  vulnerability-scanning:
+  vulnerability-scanning :
     name: Trivy Container Scan
     runs-on: ubuntu-latest
     steps:
